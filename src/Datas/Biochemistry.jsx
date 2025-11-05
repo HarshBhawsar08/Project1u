@@ -3,16 +3,17 @@ import { Link } from 'react-router-dom';
 
 function Biochemistry() {
     const topics = [
-        { id: 1, title: "Glycolysis and gluconeogenesis", rating: 4.5, img: './images/Gameto.jpeg', mcqs: 30 },
-        { id: 2, title: "ETC and bioenergetics", rating: 4.5, img: './images/Embryonic.jpeg', mcqs: 18 },
-        { id: 3, title: "Krebs Cycle", rating: 4.5, img: './images/Urogenital.png', mcqs: 18 },
-        { id: 4, title: "Face, Nose & Palate, Eye, Ear", rating: 4.5, img: './images/mouth.jpeg', mcqs: 15 },
+        { id: 1, title: "Glycolysis and gluconeogenesis", rating: 4.5, img: './images/Glycolysis.jpeg', mcqs: 30 },
+        { id: 2, title: "ETC and bioenergetics", rating: 4.5, img: './images/ETC.jpeg', mcqs: 18 },
+        { id: 3, title: "Krebs Cycle", rating: 4.5, img: './images/Krabs.jpeg', mcqs: 18 },
+        { id: 4, title: "HMP shunt pathway, Fructose", rating: 4.5, img: './images/HMP.jpeg', mcqs: 15 },
 
-        
     ];
 
     return (
         <>
+
+
             <h1 className='head text-center mt-5'>Biochemistry Topic...</h1>
             <h5 className='para text-center mt-5' style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.4)' }}>CARBOHYDRATES</h5>
 
