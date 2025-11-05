@@ -8,11 +8,12 @@ function Biochemistry() {
         { id: 3, title: "Krebs Cycle", rating: 4.5, img: './images/Urogenital.png', mcqs: 18 },
         { id: 4, title: "Face, Nose & Palate, Eye, Ear", rating: 4.5, img: './images/mouth.jpeg', mcqs: 15 },
 
+        
     ];
 
     return (
         <>
-            <h1 className='head text-center mt-5'>Biochemistry Topics...</h1>
+            <h1 className='head text-center mt-5'>Biochemistry Topic...</h1>
             <h5 className='para text-center mt-5' style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.4)' }}>CARBOHYDRATES</h5>
 
             {topics.map((topic, index) => (

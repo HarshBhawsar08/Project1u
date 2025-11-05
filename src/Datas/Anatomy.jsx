@@ -12,7 +12,7 @@ function Anatomy() {
 
     return (
         <>
-            <h1 className='head text-center mt-5'>Anatomy Topics...</h1>
+            <h1 className='head text-center mt-5'>Anatomy Topic...</h1>
             <h5 className='para text-center mt-5' style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.4)' }}>EMBRYOLOGY</h5>
 
             {topics.map((topic, index) => (
