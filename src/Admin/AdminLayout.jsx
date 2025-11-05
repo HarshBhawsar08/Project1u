@@ -1,0 +1,15 @@
+import React from "react";
+import { Outlet } from "react-router-dom";
+import AdminNavbar from "./AdminNavbar";
+
+function AdminLayout() {
+  return (
+    <>
+      <AdminNavbar />
+      <div className="admin-content">
+        <Outlet />
+      </div>
+    </>
+  );
+}
+export default AdminLayout;

@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { auth } from '../Firebase';
 import { signOut } from 'firebase/auth';
 
-function Navibar() {
+function Navbar() {
    const [currentUser, setCurrentUser] = useState(null);
    const navigate = useNavigate();
 
@@ -66,4 +66,4 @@ function Navibar() {
    );
 }
 
-export default Navibar;
+export default Navbar;
