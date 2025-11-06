@@ -29,7 +29,7 @@ function App() {
       <Routes>
 
         {/* ---------- User Layout ---------- */}
-        <Route path="/" element={<Layout />}>
+        <Route element={<Layout />}>
           <Route index element={<Login />} />
           <Route path='/navbar' element={<Navbar />} />
           <Route path="/login" element={<Login />} />
@@ -60,8 +60,8 @@ function App() {
 
         {/* --------Datas -------- */}
         <Route path="/anatomy" element={<ProtectedRoute><Anatomy /></ProtectedRoute>} />
-        <Route path='/Biochemistry' element={<ProtectedRoute><Biochemistry/></ProtectedRoute>} />
-         {/* <Route path='/navi' element={<ProtectedRoute><Navi /></ProtectedRoute>} /> */}
+        <Route path='/Biochemistry' element={<ProtectedRoute><Biochemistry /></ProtectedRoute>} />
+        {/* <Route path='/navi' element={<ProtectedRoute><Navi /></ProtectedRoute>} /> */}
 
 
         {/* // ---------- Fallback Route ---------- */}
