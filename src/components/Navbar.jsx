@@ -48,9 +48,9 @@ function Navbar() {
                            <Link className="nav-link" to="/user">User</Link>
                         </li>
                         <li className="nav-item">
-                           <button 
-                              className="btn btn-link nav-link" 
-                              onClick={handleLogout} 
+                           <button
+                              className="btn btn-link nav-link"
+                              onClick={handleLogout}
                               style={{ textDecoration: 'none' }}
                            >
                               Logout

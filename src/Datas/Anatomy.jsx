@@ -33,10 +33,11 @@ function Anatomy() {
                                 width: '40px',
                                 height: '40px',
                                 borderRadius: '50%',
-                                backgroundColor: '#9561f6ff',
+                                backgroundColor: '#131414ff',
                                 color: '#fff',
                                 fontWeight: 'bold',
                                 fontSize: '18px',
+
                             }}
                         >
                             {index + 1}
