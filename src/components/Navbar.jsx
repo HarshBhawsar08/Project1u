@@ -25,7 +25,7 @@ function Navbar() {
    }
 
    return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient bg-success p-3">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient bg-success p-4">
          <div className="container">
             <Link className="navbar-brand" to="/">Pharmasis-App</Link>
 

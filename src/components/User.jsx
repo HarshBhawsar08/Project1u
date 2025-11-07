@@ -17,7 +17,7 @@ function User() {
 
       <div className="container">
         <Link to="/anatomy" className='text-decoration-none text-dark d-block'>
-          <div className="card col-md-10 mx-auto mt-5 shadow border border-gradient rounded-3 p-3 bg-light">
+          <div className="card col-md-11 mx-auto mt-5 shadow border border-gradient rounded-3 p-3 bg-light">
             <div className="d-flex align-items-center flex-wrap">
               <div className="me-3 fs-1 m-2" style={{ textShadow: '1px 1px 8px #f707b380' }}>🧠</div>
               <div className="flex-grow-1 text-center">
@@ -30,7 +30,7 @@ function User() {
         </Link>
 
         <Link to="/biochemistry" className='text-decoration-none text-dark d-block'>
-          <div className="card col-md-10 mx-auto mt-4 shadow border border-gradient rounded-3 p-3 bg-light">
+          <div className="card col-md-11 mx-auto mt-4 shadow border border-gradient rounded-3 p-3 bg-light">
             <div className="d-flex align-items-center flex-wrap">
               <div className="me-3 fs-1 m-2" style={{ textShadow: '1px 1px 8px #e3f14b80' }}>🧬</div>
               <div className="flex-grow-1 text-center">
@@ -43,7 +43,7 @@ function User() {
         </Link>
 
         <Link to="/physiology" className='text-decoration-none text-dark d-block'>
-          <div className="card col-md-10 mx-auto mt-4 shadow border border-gradient rounded-3 p-3 bg-light">
+          <div className="card col-md-11 mx-auto mt-4 shadow border border-gradient rounded-3 p-3 bg-light">
             <div className="d-flex align-items-center flex-wrap">
               <div className="me-3 fs-1 m-2" style={{ textShadow: '1px 1px 8px rgba(59, 7, 247, 0.5)' }}>🩺</div>
               <div className="flex-grow-1 text-center">
