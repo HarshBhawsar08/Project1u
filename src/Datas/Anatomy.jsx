@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import image from '../../public/images/Gameto.jpeg';
 
 function Anatomy() {
     const topics = [
-        { id: 1, title: "Gametogenesis", modules: 4.5, img: './images/Gameto.jpeg', mcqs: 19 },
-        { id: 2, title: "Embryonic Phase of Development", modules: 4.6, img: './images/Embryonic.jpeg', mcqs: 20 },
-        { id: 3, title: "Urogenital System", modules: 4.5, img: './images/Urogenital.png', mcqs: 18 },
-        { id: 4, title: "Face, Nose & Palate, Eye, Ear", modules: 4.5, img: './images/mouth.jpeg', mcqs: 15 },
-
+        { id: 1, title: "Gametogenesis", modules: 4.5, img: image, mcqs: 19 },
+        { id: 2, title: "Embryonic Phase of Development", modules: 4.6, img: image, mcqs: 20 },
+        { id: 3, title: "Urogenital System", modules: 4.5, img: image, mcqs: 18 },
+        { id: 4, title: "Face, Nose & Palate, Eye, Ear", modules: 4.5, img: image, mcqs: 15 },
     ];
 
     return (
@@ -19,50 +19,49 @@ function Anatomy() {
                 <Link
                     to={`/topic/${topic.id}`}
                     key={topic.id}
-                    className='text-decoration-none text-dark'
+                    className='text-decoration-none text-dark '
                 >
-                    <div className="card col-md-10 mx-auto mt-3 shadow border border-gradient rounded-3 p-3 bg-light position-relative m-5 mt-2">
+                    <div className="card col-11 col-sm-10 col-md-10 mx-auto mt-3 shadow border border-gradient rounded-3 p-3 bg-light position-relative m-3 m-md-5 mt-2">
 
-                        {/* Number inside the card on left */}
                         <div
                             className="position-absolute d-flex justify-content-center align-items-center"
                             style={{
-                                left: '-15px',  // slightly outside the card
+                                left: '-25px',
                                 top: '50%',
                                 transform: 'translateY(-50%)',
-                                width: '40px',
-                                height: '40px',
+                                width: '35px',
+                                height: '35px',
                                 borderRadius: '50%',
                                 backgroundColor: '#131414ff',
                                 color: '#fff',
                                 fontWeight: 'bold',
-                                fontSize: '18px',
-
+                                fontSize: '16px',
                             }}
                         >
                             {index + 1}
                         </div>
 
-                        <div className="row g-0 align-items-center">
-                            {/* Image */}
-                            <div className="col-md-3 text-center">
+                        <div className="row g-3 align-items-center flex-column flex-md-row text-center text-md-start">
+
+                            <div className="col-md-3 col-12 ">
                                 <img
                                     src={topic.img}
                                     alt={topic.title}
                                     className="img-fluid rounded-start"
                                     style={{
-                                        width: '150px',
-                                        height: '130px',
+                                        width: '100%',
+                                        maxWidth: '150px',
+                                        height: 'auto',
                                         objectFit: 'cover',
-                                        borderRadius: '1px'
+                                        borderRadius: '1px',
                                     }}
                                 />
                             </div>
 
-                            {/* Content */}
-                            <div className="col-md-9">
+
+                            <div className="col-md-9 col-12 mt-3 mt-md-0">
                                 <div className="card-body">
-                                    <h4 className="card-title mb-5">{topic.title}</h4>
+                                    <h4 className="card-title mb-3 mb-md-5">{topic.title}</h4>
                                     <p className="card-text mb-0"> ⭐ {topic.modules} &nbsp; &nbsp; | {topic.mcqs}  MCQs</p>
                                 </div>
                             </div>
@@ -75,5 +74,3 @@ function Anatomy() {
 }
 
 export default Anatomy;
-
-

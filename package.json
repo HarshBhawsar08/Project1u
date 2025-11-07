@@ -1,5 +1,5 @@
 {
-  "homepage": "https://harshbhawsar08.github.io/Project1u/",
+  "homepage": "https://harshbhawsar08.github.io/Project1u",
   "name": "pharma-frontend",
   "private": true,
   "version": "0.0.0",
@@ -10,7 +10,6 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "postbuild": "cp dist/index.html dist/404.html",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

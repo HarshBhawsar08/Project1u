@@ -25,6 +25,7 @@ function AdminUsers() {
   return (
     <div className="container mt-5">
       <h3 className="text-center mb-4">Registered Users</h3>
+
       <div className="table-responsive">
         <table className="table table-striped table-bordered shadow-sm">
           <thead className="table-dark">
@@ -43,7 +44,7 @@ function AdminUsers() {
                   <td>{index + 1}</td>
                   <td>{user.name}</td>
                   <td>{user.email}</td>
-                  <td>{user.uid}</td>
+                  <td style={{ wordBreak: 'break-all' }}>{user.uid}</td>
                   <td>{new Date(user.createdAt.seconds * 1000).toLocaleString()}</td>
                 </tr>
               ))
@@ -62,4 +63,3 @@ function AdminUsers() {
 }
 
 export default AdminUsers;
-        

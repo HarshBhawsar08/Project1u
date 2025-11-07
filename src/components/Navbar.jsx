@@ -25,10 +25,25 @@ function Navbar() {
    }
 
    return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient bg-success p-4">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient bg-success p-3">
          <div className="container">
             <Link className="navbar-brand" to="/">Pharmasis-App</Link>
-            <div>
+
+           
+            <button
+               className="navbar-toggler"
+               type="button"
+               data-bs-toggle="collapse"
+               data-bs-target="#navbarNav"
+               aria-controls="navbarNav"
+               aria-expanded="false"
+               aria-label="Toggle navigation"
+            >
+               <span className="navbar-toggler-icon"></span>
+            </button>
+
+           
+            <div className="collapse navbar-collapse" id="navbarNav">
                <ul className="navbar-nav ms-auto">
 
                   {!currentUser && (
@@ -48,9 +63,9 @@ function Navbar() {
                            <Link className="nav-link" to="/user">User</Link>
                         </li>
                         <li className="nav-item">
-                           <button
-                              className="btn btn-link nav-link"
-                              onClick={handleLogout}
+                           <button 
+                              className="btn btn-link nav-link" 
+                              onClick={handleLogout} 
                               style={{ textDecoration: 'none' }}
                            >
                               Logout

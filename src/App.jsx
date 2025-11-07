@@ -1,13 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
+import { Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
-import Navbar from './components/Navbar';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import User from './components/User';
 import ProtectedRoute from './components/ProtectedRoute';
-import Logout from './components/Logout';
 
 import AdminLayout from './Admin/AdminLayout';
 import AdminNavbar from './Admin/AdminNavbar';
@@ -19,60 +16,52 @@ import AdminDashboard from './Admin/AdminDashboard';
 
 import Anatomy from './Datas/Anatomy';
 import Biochemistry from './Datas/Biochemistry';
+import Physiology from './Datas/Physiology';
 // import Navi from './Datas/Navi';
 
 
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
+    <Routes>
 
-        {/* ---------- User Layout ---------- */}
-        <Route element={<Layout />}>
-          <Route index element={<Login />} />
-          <Route path='/navbar' element={<Navbar />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/logout" element={<Logout />} />
+      {/* ---------- User Layout ---------- */}
+      <Route element={<Layout />}>
+        <Route index path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        {/* <Route element={<ProtectedRoute />}> */}
+        <Route
+          path="user"
+          element={
+            <ProtectedRoute>
+              <User />
+            </ProtectedRoute>
+          }
+        />
+        {/* </Route> */}
+      </Route>
 
+      {/* ---------- Admin Layout ---------- */}
+      <Route path="/admin/login" element={<AdminLogin />} />
+      <Route path="/admin" element={<AdminProtectedRoute><AdminLayout /></AdminProtectedRoute>}>
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/users" element={<AdminUsers />} />
+        <Route path="/admin/logout" element={<AdminLogout />} />
+      </Route>
 
-          <Route
-            path="user"
-            element={
-              <ProtectedRoute>
-                <User />
-              </ProtectedRoute>
-            }
-          />
-        </Route>
+      {/* --------Datas -------- */}
+      <Route path="/anatomy" element={<ProtectedRoute><Anatomy /></ProtectedRoute>} />
+      <Route path='/biochemistry' element={<ProtectedRoute><Biochemistry /></ProtectedRoute>} />
+      <Route path='/physiology' element={<ProtectedRoute><Physiology /></ProtectedRoute>} />
+      {/* <Route path='/navi' element={<ProtectedRoute><Navi /></ProtectedRoute>} /> */}
 
+      {/* // ---------- Fallback Route ---------- */}
+      <Route path="*" element={<Login />} />
+    </Routes>
 
-
-        {/* ---------- Admin Layout ---------- */}
-        <Route path="/admin/login" element={<AdminLogin />} />
-        <Route path="/admin" element={<AdminProtectedRoute><AdminLayout /></AdminProtectedRoute>}>
-          <Route path="dashboard" element={<AdminDashboard />} />
-          <Route path="users" element={<AdminUsers />} />
-          <Route path="logout" element={<AdminLogout />} />
-        </Route>
-
-
-        {/* --------Datas -------- */}
-        <Route path="/anatomy" element={<ProtectedRoute><Anatomy /></ProtectedRoute>} />
-        <Route path='/Biochemistry' element={<ProtectedRoute><Biochemistry /></ProtectedRoute>} />
-        {/* <Route path='/navi' element={<ProtectedRoute><Navi /></ProtectedRoute>} /> */}
-
-
-        {/* // ---------- Fallback Route ---------- */}
-        <Route path="*" element={<Login />} />
-
-
-
-
-      </Routes>
-    </BrowserRouter>
   );
 }
-
 export default App;
+
+
